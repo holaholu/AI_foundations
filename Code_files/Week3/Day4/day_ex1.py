@@ -9,5 +9,5 @@ indefinite_integral = sp.integrate(f, x)
 print("Indefinite integral: ", indefinite_integral)
 
 # Compute definite integral
-definite_integral = sp.integrate(f, (x, 0, sp.oo))
+definite_integral = sp.integrate(f, (x, 0, sp.oo)) # (x, 0, sp.oo) means from 0 to infinity
 print("Definite Integral: ", definite_integral)

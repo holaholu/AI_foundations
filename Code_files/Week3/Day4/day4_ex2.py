@@ -6,7 +6,7 @@ X = 2 * np.random.rand(100, 1)
 y = 4 + 3 * X + np.random.randn(100, 1)
 
 # Add bias term to X
-X_b = np.c_[np.ones((100, 1)), X]
+X_b = np.c_[np.ones((100, 1)), X] # Add bias term to X. A bias term is a constant term that is added to the linear combination of the features. It is used to shift the decision boundary.
 
 # SGD Implementaion
 def stochastic_gradient_descent(X, y, theta, learning_rate, n_epocs):

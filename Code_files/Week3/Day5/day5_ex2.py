@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from scipy.stats import norm, binom, poisson 
 
 # Gausian Distribution
-# x = np.linspace(-4, 4, 100)
+# x = np.linspace(-4, 4, 100) # Generate 100 points between -4 and 4
 # y = norm.pdf(x, loc=0, scale=1)
 # plt.plot(x, y, label="Gaussian")
 # plt.title("Gaussian Distribution")
@@ -11,14 +11,14 @@ from scipy.stats import norm, binom, poisson
 
 # Binomial Distribution
 # n, p = 10, 0.5
-# x = np.arange(0, n+1)
+# x = np.arange(0, n+1) # Generate 10 points between 0 and 10
 # y = binom.pmf(x, n, p)
 # plt.bar(x, y, label="Binomial")
 # plt.title("Binomial Distribution")
 # plt.show()
 
 # Poisson Distribution
-lam =3
+lam =3 # lambda
 x = np.arange(0, 10)
 y = poisson.pmf(x, lam)
 plt.bar(x, y, label="Poisson")

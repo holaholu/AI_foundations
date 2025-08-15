@@ -2,7 +2,7 @@ import sympy as sp
 
 
 # Define a multivariable function
-x, y = sp.symbols('x y')
+x, y = sp.symbols('x y') # define symbols
 f = x**2 + 3*y**2 - 4*x*y
 
 # Compute partial derivatives
