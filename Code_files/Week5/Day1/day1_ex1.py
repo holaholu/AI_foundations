@@ -20,7 +20,6 @@ X_train, X_test, y_train, y_test = train_test_split(features, target, test_size=
 
 print("Training Data Set: ", X_train.shape)
 print("Testing Data Set: ", X_test.shape)
-
 # Visualize relationships
 sns.pairplot(df, x_vars=["total_bill", "size"], y_vars="tip", height=5, aspect=0.8, kind="scatter")
 plt.title("Feature vs Target Relationships")

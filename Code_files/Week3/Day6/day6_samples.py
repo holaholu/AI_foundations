@@ -8,7 +8,7 @@ variance = sum((x - mean) ** 2 for x in data) / len(data)
 std_dev = variance ** 0.5
 
 sample_mean = mean
-z_score = 1.96
+z_score = 1.96 # z score for 95% confidence interval
 
 ci = (sample_mean - z_score * (std_dev / len(data) ** 0.5),
       sample_mean + z_score * (std_dev / len(data) ** 0.5))

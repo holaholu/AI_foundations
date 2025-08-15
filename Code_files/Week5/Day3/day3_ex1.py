@@ -23,6 +23,12 @@ X_poly = poly.fit_transform(X)
 # Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X_poly, y, test_size=0.2, random_state=42)
 
+
+# # Fit polynomial regression model
+model = LinearRegression()
+model.fit(X_poly, y)
+y_pred = model.predict(X_poly)
+
 # Ridge Regression
 ridge_model = Ridge(alpha=1)
 ridge_model.fit(X_train, y_train)
@@ -42,35 +48,28 @@ print("Ridge Regression MSE:", ridge_mse)
 lasso_mse = mean_squared_error(y_test, lasso_predictions)
 print("Lasso Regression MSE:", lasso_mse)
 
+# Evaluate model performance
+mse = mean_squared_error(y, y_pred)
+print("Linear Regression Mean Squared Error (MSE): ", mse)
+
 # Visualize Ridge vs Lasso predictions
 plt.figure(figsize=(10,6))
 plt.scatter(X_test[:, 0], y_test, color="blue", label="Actual Data", alpha=0.5)
 plt.scatter(X_test[:, 0], ridge_predictions, color="green", label="Ridge Predictions", alpha=0.5)
 plt.scatter(X_test[:, 0], lasso_predictions, color="orange", label="Lasso Predictions", alpha=0.5)
-plt.title("Ridge vs Lasso Regression")
+plt.scatter(X, y_pred, color="red", label="Linear Regression Predicted Curve", alpha=0.5)
+plt.title("Polynomial Regression vs Ridge vs Lasso Regression")
 plt.xlabel("Median Income (Transformed)")
 plt.ylabel("Median House Value in California")
 plt.legend()
 plt.show()
 
-# # Fit polynomial regression model
-# model = LinearRegression()
-# model.fit(X_poly, y)
 
-# # Make Predictions
-# y_pred = model.predict(X_poly)
 
-# # Plot actual vs predicted values
-# plt.figure(figsize=(10,6))
-# plt.scatter(X, y, color="blue", label="Actual Data", alpha=0.5)
-# plt.scatter(X, y_pred, color="red", label="Predicted Curve", alpha=0.5)
-# plt.title("Polynomial Regression")
-# plt.xlabel("Median Income in California")
-# plt.ylabel("Median House Value in California")
-# plt.legend()
-# plt.show()
 
-# # Evaluate model performance
-# mse = mean_squared_error(y, y_pred)
-# print("Mean Squared Error (MSE): ", mse)
+
+
+
+
+
 

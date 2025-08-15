@@ -1,9 +1,10 @@
 from scipy.stats import f_oneway
+from scipy.stats import chi2_contingency
 
-# # Contingency Table
+# Contingency Table
 # data = [[50, 30], [20, 40]]
 
-# # Perform Chi-Square Test
+# Perform Chi-Square Test
 # chi2, p, dof, expected = chi2_contingency(data)
 # print("Chi-Square Statistic: ", chi2)
 # print("P-Value: ", p)

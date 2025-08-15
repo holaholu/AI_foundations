@@ -7,8 +7,8 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_sc
 # Generate synthetioc dataset
 np.random.seed(42)
 n_samples = 200
-X = np.random.rand(n_samples, 2) * 10
-y = (X[:, 0] * 1.5 + X[:, 1] > 15).astype(int)
+X = np.random.rand(n_samples, 2) * 10 #random.rand() generates random numbers from a uniform distribution. * 10 scales the values between 0 and 10
+y = (X[:, 0] * 1.5 + X[:, 1] > 15).astype(int) # creates a binary target variable based on a linear combination of the features
 
 # Create a Dataframe
 df = pd.DataFrame(X, columns=['Age', 'Salary'])
@@ -36,15 +36,15 @@ import matplotlib.pyplot as plt
 # Plot decision boundary
 x_min, x_max = X[:, 0].min() - 1, X[:, 0].max() + 1
 y_min, y_max = X[:, 1].min() -1, X[:, 1].max() + 1
-xx, yy = np.meshgrid(np.arange(x_min, x_max, 0.1), np.arange(y_min, y_max, 0.1))
+xx, yy = np.meshgrid(np.arange(x_min, x_max, 0.1), np.arange(y_min, y_max, 0.1)) # creates a grid of points
 
 # Predict probabilities for grid points
-Z = model.predict(np.c_[xx.ravel(), yy.ravel()])
-Z = Z.reshape(xx.shape)
+Z = model.predict(np.c_[xx.ravel(), yy.ravel()]) # ravel() flattens the array
+Z = Z.reshape(xx.shape) # reshapes the array to match the grid shape
 
 # Plot
-plt.contourf(xx, yy, Z, alpha=0.8, cmap="coolwarm")
-plt.scatter(X_test['Age'], X_test['Salary'], c=y_test, edgecolor="k", cmap="coolwarm")
+plt.contourf(xx, yy, Z, alpha=0.8, cmap="coolwarm") # creates a filled contour plot
+plt.scatter(X_test['Age'], X_test['Salary'], c=y_test, edgecolor="k", cmap="coolwarm") # plots the test data
 plt.title("Logistic Regression Decision Boundary")
 plt.xlabel("Age")
 plt.ylabel("Salary")

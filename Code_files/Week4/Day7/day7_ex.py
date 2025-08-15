@@ -4,12 +4,12 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 from scipy.stats import chi2_contingency
-
+from sklearn.linear_model import LinearRegression
 # Load Dataset
 url = "https://raw.githubusercontent.com/mwaskom/seaborn-data/master/tips.csv"
 df = pd.read_csv(url)
 
-# contingency_table = pd.crosstab(df['smoker'], df['time'])
+# contingency_table = pd.crosstab(df['smoker'], df['time']) #cross-tabulation
 
 # # Perform Ch-Square Test
 # chi2, p, dof, expected = chi2_contingency(contingency_table)

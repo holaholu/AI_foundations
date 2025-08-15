@@ -15,6 +15,6 @@ print("Skewness: ", skew(feature))
 print("Kurtosis: ", kurtosis(feature))
 
 # Visualize distribution
-sns.histplot(feature, kde=True)
+sns.histplot(feature, kde=True) # kde=True adds a kernel density estimate
 plt.title("Distribution of Sepal Lenth")
 plt.show()

@@ -24,6 +24,14 @@ y_pred = model.predict(X_test)
 print("Slope : ", model.coef_[0][0])
 print("Intercept : ", model.intercept_[0])
 
+
+
+# Evaluate performance
+mse = mean_squared_error(y_test, y_pred)
+r2 = r2_score(y_test, y_pred) # the closer to 1, the better
+print("MSE: ", mse)
+print("R-Squared: ", r2)
+
 plt.scatter(X_test, y_test, color="blue", label="Actual")
 plt.plot(X_test, y_pred, color="red", label="Predicted")
 plt.title("Linear Regression Model")
@@ -31,11 +39,3 @@ plt.xlabel("X")
 plt.ylabel("y")
 plt.legend()
 plt.show()
-
-# Evaluate performance
-mse = mean_squared_error(y_test, y_pred)
-r2 = r2_score(y_test, y_pred)
-print("MSE: ", mse)
-print("R-Squared: ", r2)
-
-
