@@ -7,7 +7,7 @@ from sklearn.metrics import accuracy_score, classification_report
 data = load_breast_cancer()
 X, y = data.data, data.target
 
-# Split dataset
+# Split dataset001
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # display dataset information
