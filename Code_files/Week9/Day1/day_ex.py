@@ -6,19 +6,19 @@ import matplotlib.pyplot as plt
 
 # Load MNIST
 (X_train_mnist, y_train_mnist), (X_test_mnist, y_test_mnist) = mnist.load_data()
-print(f"MNIST Dataset: Train - {X_train_mnist.shape}, Test - {X_test_mnist.shape}")
+#print(f"MNIST Dataset: Train - {X_train_mnist.shape}, Test - {X_test_mnist.shape}")
 
 # Load CIFAR-10
 (X_train_cifar, y_train_cifar), (X_test_cifar, y_test_cifar) = cifar10.load_data()
-print(f"CIFAR-10 Dataset: Train - {X_train_cifar.shape}, Test - {X_test_cifar.shape}")
+#print(f"CIFAR-10 Dataset: Train - {X_train_cifar.shape}, Test - {X_test_cifar.shape}")
 
 # Define a basic dense layer
 layer = tf.keras.layers.Dense(units=10, activation='relu')
-print(f"TensorFlow Layer: {layer}")
+#print(f"TensorFlow Layer: {layer}")
 
 # Define a basic dense layer
 layer = nn.Linear(in_features=10, out_features=5)
-print(f"Pytorch Layer: {layer}")
+#print(f"Pytorch Layer: {layer}")
 
 
 # Visualize MNIST sample
