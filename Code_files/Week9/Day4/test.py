@@ -26,6 +26,6 @@ X_b = np.c_[np.ones((m, 1)), X] # np.c_ is used to concatenate the bias term to 
 # Gradient Descent
 for iteration in range(iterations):
     gradients = 2/m * X_b.T.dot(X_b.dot(theta) - y) # calculate the gradient of the loss function with respect to the parameters    
-    theta -= learning_rate * gradients # updated the parameters
+    theta -= learning_rate * gradients # updated the parameters+
 
 print("Optimized Parameters (Theta): \n ", theta)
