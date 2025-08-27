@@ -5,6 +5,7 @@ from torch.utils.data import DataLoader, TensorDataset
 from tensorflow.keras.datasets import imdb
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
+# hyperparameters
 vocab_size = 10000
 max_len = 200
 

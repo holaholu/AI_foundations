@@ -58,8 +58,8 @@ max_pooled_tensor = max_pool(input_tensor)
 avg_pool = nn.AvgPool2d(kernel_size=2, stride=2)
 avg_pooled_tensor = avg_pool(input_tensor)
 
-print(f"Max Pooled Tensor:\n{max_pooled_tensor.squeeze().numpy()}")
-print(f"Average Pooled Tensor:\n{avg_pooled_tensor.squeeze().numpy()}")
+print(f"Max Pooled Pytorch:\n{max_pooled_tensor.squeeze().numpy()}")
+print(f"Average Pooled Pytorch:\n{avg_pooled_tensor.squeeze().numpy()}")
 
 # TensorFlow Example
 model_tf = tf.keras.Sequential([

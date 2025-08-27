@@ -7,11 +7,11 @@ from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropou
 # Load CIFAR-10 dataset
 (X_train, y_train), (X_test, y_test) = cifar10.load_data()
 
-# Normalize the data
+# Normalize the data in the range [0, 1]
 X_train = X_train.astype('float32') / 255.0
 X_test = X_test.astype('float32') / 255.0
 
-# One-hot encode the labels
+# One-hot encode the labels into 10 classes of 0-9
 y_train = to_categorical(y_train, 10)
 y_test = to_categorical(y_test, 10)
 
@@ -20,22 +20,22 @@ print(f"Test Data Shape: {X_test.shape}, Label Shapes: {y_test.shape}")
 
 # Build the CNN model
 model = Sequential([
-    Conv2D(32, (3, 3), activation='relu', input_shape=(32,32,3)),
-    MaxPooling2D((2, 2)),
-    Conv2D(64, (3, 3), activation='relu'),
-    MaxPooling2D((2, 2)),
-    Flatten(),
-    Dense(128, activation='relu'),
-    Dropout(0.5),
-    Dense(10, activation='softmax')
+    Conv2D(32, (3, 3), activation='relu', input_shape=(32,32,3)), # First convolutional layer
+    MaxPooling2D((2, 2)), # Pooling layer to reduce the spatial dimensions
+    Conv2D(64, (3, 3), activation='relu'), # Second convolutional layer
+    MaxPooling2D((2, 2)), # Pooling layer to reduce the spatial dimensions
+    Flatten(), # Flatten the output to feed into a dense layer
+    Dense(128, activation='relu'), # Fully connected layer
+    Dropout(0.5), # Dropout to prevent overfitting
+    Dense(10, activation='softmax') # Output layer with 10 classes
 ])
 
 model.summary()
 
 model.compile(
-    optimizer='adam',
-    loss='categorical_crossentropy',
-    metrics=['accuracy']
+    optimizer='adam', # Use Adam optimizer
+    loss='categorical_crossentropy', # Use categorical cross entropy loss
+    metrics=['accuracy'] # Track accuracy
 )
 
 # TRain the model
