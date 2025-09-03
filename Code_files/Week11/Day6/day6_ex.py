@@ -5,7 +5,7 @@ import torch.optim as optim
 from torch.utils.data import DataLoader, Dataset
 import numpy as np
 
-# Example English-to-French sentences
+# Examples English-to-French sentences
 english_sentences = ["hello", "how are you", "good morning", "thank you", "good night"]
 french_sentences = ["bonjour", "comment ça va", "bon matin", "merci", "bonne nuit"]
 
