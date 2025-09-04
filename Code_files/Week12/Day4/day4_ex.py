@@ -45,7 +45,7 @@ class TransformerWithPositionalEncoding(nn.Module):
         self.norm1 = nn.LayerNorm(embed_dim)
         self.norm2 = nn.LayerNorm(embed_dim) 
         
-    def forward(self, x):
+    def forward(self, x): #forward pass means the flow of data through the network
         # Add Positional encoding to embedding
         x = self.embedding(x) + self.positional_encoding
         # Self Attention

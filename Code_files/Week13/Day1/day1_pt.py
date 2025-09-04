@@ -7,7 +7,7 @@ model = models.resnet50(pretrained=True)
 # Print model architecture
 # print(model)
 
-# Freeze the model parameters
+# Freeze the model parameterss
 for param in model.parameters():
     param.requires_grad = False
     
