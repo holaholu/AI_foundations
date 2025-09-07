@@ -1,3 +1,6 @@
+#Description
+#Ridge and Lasso Regression are types of supervised learning algorithms that can be used for both classification and regression tasks. They work by adding a regularization term to the loss function, which helps prevent overfitting by penalizing large coefficients.Ridge ( adds L2 penalty: sum of squared coefficients) and Lasso regression ( adds L! Penalty: sum of absolute coefficients) are regularization techniques applied to linear Regression to prevent overfitting by penalizing large coefficients.
+
 #import necessary libraries
 from sklearn.linear_model import Ridge, Lasso
 from sklearn.model_selection import train_test_split

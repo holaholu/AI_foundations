@@ -1,5 +1,8 @@
+#Description
+#Gradient Boosting is a machine learning algorithm that builds an ensemble of decision trees by iteratively training each tree to correct the errors made by the previous trees. It works by fitting a new tree to the residuals (errors) of the previous trees, and adding it to the ensemble. This process is repeated for a specified number of iterations, with each new tree being trained to correct the errors made by the previous trees.
+
 #import necessary libraries
-from sklearn.svm import SVC # Support Vector Classifier
+from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score,confusion_matrix
 import numpy as np
@@ -12,7 +15,7 @@ y = np.array([0, 0, 0, 0, 1, 1, 1, 1, 1, 1]) # 0 = fail, 1 = pass
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 #Initialize and train the model
-model = SVC(kernel='linear') # kernel is the type of kernel to use
+model = GradientBoostingClassifier()
 model.fit(X_train, y_train)
 
 #Make predictions

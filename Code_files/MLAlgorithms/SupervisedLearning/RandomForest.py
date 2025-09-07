@@ -1,5 +1,8 @@
+#Description
+#Random Forest is a type of supervised learning algorithm that can be used for both classification and regression tasks. It works by building an ensemble of decision trees and using their predictions to make a final prediction. It is a powerful algorithm that can handle both numerical and categorical features, and it is less sensitive to overfitting than other algorithms.Each tree is trained with a random subset of data. Final prediction is averaged (for regression) or voted (for classification) from the predictions of individual trees. Reduces overfitting and improves generalization.
+
 #import necessary libraries
-from sklearn.naive_bayes import GaussianNB
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score,confusion_matrix
 import numpy as np
@@ -12,7 +15,7 @@ y = np.array([0, 0, 0, 0, 1, 1, 1, 1, 1, 1]) # 0 = fail, 1 = pass
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 #Initialize and train the model
-model = GaussianNB()
+model = RandomForestClassifier()
 model.fit(X_train, y_train)
 
 #Make predictions

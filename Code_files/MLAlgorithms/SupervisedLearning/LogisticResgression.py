@@ -1,3 +1,6 @@
+#Description
+#Logistic Regression is a type of supervised learning algorithm that can be used for both classification and regression tasks. It works by fitting a linear model to the data and using the sigmoid function to map the output to a probability between 0 and 1. It is a simple and effective algorithm for binary classification tasks.
+
 #import necessary libraries
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
