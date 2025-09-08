@@ -1,0 +1,34 @@
+#Definitions
+
+Machine Learning is the process of training a model to make predictions or decisions based on data. Types of Machine Learning include Supervised Learning, Unsupervised Learning, and Reinforcement Learning (learn a strategy to maximize a reward from experience). 
+
+Deep Learning is a subset of machine learning that uses neural networks to learn from data. 
+
+Neural Networks are a type of machine learning model that are inspired by the structure and function of the human brain. 
+
+TensorFlow (open source by Google) is a machine learning framework that is used to build and train models. 
+
+Keras is a high-level neural networks API that is used to build and train models. 
+
+Layers are the building blocks of a neural network. 
+
+Nodes are the individual units of a layer. 
+
+Weights are the parameters that are learned during training. 
+
+Biases are the parameters that are learned during training. 
+
+Activation functions are the functions that are applied to the output of a node. 
+
+Loss functions are the functions that are used to measure the difference between the predicted and actual values. 
+
+Optimizers are the functions that are used to update the weights and biases during training. 
+
+Epochs are the number of times that the model is exposed to the training dataset. 
+
+Batch size is the number of samples that are processed before the model is updated. 
+
+Validation is the process of evaluating the model on a separate dataset to estimate its performance on new data. 
+
+Regularization is the process of adding a penalty term to the loss function to prevent overfitting. 
+
