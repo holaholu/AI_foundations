@@ -125,3 +125,19 @@ print("Mean Absolute Error:", mean_absolute_error(z, z).numpy())
 
 #Optimizer are used to update the model's weights to minimize the loss function
 #Optimizer include tf.keras.optimizers.SGD for Stochastic Gradient Descent, tf.keras.optimizers.Adam for Adaptive Moment Estimation, tf.keras.optimizers.RMSprop for Root Mean Square Propagation, tf.keras.optimizers.Adagrad for Adaptive Gradient.
+
+#Keras is a high-level neural networks API that is used to build and train models.
+
+#Key components of Keras include layers,activations,loss functions,metrics, models, optimizers, and callbacks.
+
+#Steps to Train and Evaluate a model include: data preprocessing, model definition, model compilation, model training, model prediction,model evaluation, model visualization / deployment,  model save, and continuous improvement.
+
+#CNNs are used for object detection, image segmentation, and image classification. Kernel/filter is a small matrix that is used to extract features from the image. Pooling is used to reduce the spatial dimensions of the feature maps by taking the maximum value in each pool.
+
+#RNNs are used for sequence prediction.Architecture includes an input layer, an output layer, and a hidden layer. Types of RNNs include Simple RNN, LSTM, and GRU. Applications include time series prediction (stock market prediction,weatherforecasting, demand forecasting, healthcare forecasting), natural language processing(Text Generation, Machine Translation, Sentiment Analysis), and speech recognition.
+
+#LSTMs are used for time series prediction.
+
+#Transformers are used for natural language processing.
+
+#Transfer Learning is used to transfer the knowledge of a pre-trained model to a new model. Benefits include faster training, better performance, and less data required. Strategies in transfer learning include feature extraction(base_model.trainable = False), fine-tuning(base_model.trainable = True), and transfer learning with data augmentation(base_model.trainable = True).
