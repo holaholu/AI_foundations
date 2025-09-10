@@ -82,11 +82,36 @@ z_normal = torch.randn(3, 3) #create a 3x3 tensor of random values from a normal
 
 #elementwise operations
 z = x + y #elementwise addition
-print("z:")
-print(z)
+# print("z:")
+# print(z)
 
 #matrix operations
 z = torch.matmul(x, y) #matrix multiplication
-print("z:")
-print(z)
+# print("z:")
+# print(z)
+
+#indexing and slicing
+x=torch.tensor([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+# print("x:")
+# print(x)
+# print("x[0]:") #print the first row
+# print(x[0])
+# print("x[:, 0]:") #print the first column
+# print(x[:, 0])
+#print first and last row together 
+selected_row =x[[0,2],:]
+# print("selected_row:")
+# print(selected_row)
+
+#broadcasting is a feature that allows tensors of different shapes to be used in elementwise operations
+x = torch.tensor([1, 2, 3])
+y = torch.tensor([[4, 5, 6], [1, 2, 3]])
+z = x + y
+# print("z:")
+# print(z)
+
+#In-place operations
+x.add_(5) #add y to x in-place
+print("x:")
+print(x)
 
