@@ -1,5 +1,7 @@
 #Description
-#Transformers are deep learning architectures designed for handling sequential data without the need for recurrent connections (RNNs) or convolutions (CNNs). They are based on the idea of self-attention, which allows the model to focus on different parts of the input data at different times, making it more effective at capturing long-range dependencies in the data.It processes all token in the input sequence simultaneously, allowing it to capture dependencies between tokens regardless of their distance/position in the sequence.It is the foundation of many NLP tasks and models, including BERT, GPT, and T5.
+#Transformers are deep learning architectures designed for handling sequential data without the need for recurrent connections (RNNs) or convolutions (CNNs). They are based on the idea of self-attention, which allows the model to focus on different parts of the input data at different times (regardless of their distance/position in the sequence), making it more effective at capturing long-range dependencies in the data.It processes all token in the input sequence simultaneously, allowing it to capture dependencies between tokens regardless of their distance/position in the sequence.It is the foundation of many NLP tasks and models, including BERT, GPT, and T5.
+
+#The architecture consist of an encoder and a decoder. The encoder processes the input data and the decoder processes the output data.
 
 #import necessary libraries
 import tensorflow as tf #provides a set of tools for deep learning

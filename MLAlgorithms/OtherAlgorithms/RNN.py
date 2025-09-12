@@ -1,5 +1,7 @@
 #Description
-#RNN is a type of neural network that is used to process sequential data (data that is ordered in time or space) such as time series data, text, and speech. RNNs have connections that form directed cycles allowing them to maintain information from previous steps in the sequence.  A common variant of RNN is the Long Short-Term Memory (LSTM) network which which helps to address the vanishing gradient problem (long-term dependencies).
+#RNN is a type of neural network that is used to process sequential data (data that is ordered in time or space) such as time series data, text, and speech.This makes them suitable for tasks like language translation, speech recognition, and time series prediction. RNNs have connections that form directed cycles allowing them to maintain information from previous steps in the sequence.  A common variant of RNN is the Long Short-Term Memory (LSTM) network which which helps to address the vanishing gradient problem (long-term dependencies).
+
+
 
 #import necessary libraries
 import tensorflow as tf #provides a set of tools for deep learning

@@ -1,5 +1,13 @@
 #Description
-#Convolutional Neural Network (CNN) is a type of deep learning algorithm that is used for image classification. It is based on the idea of convolving the input image with a set of filters to capture spatial hierarchies and extract features (like edges, shapes, textures, etc.) from the image. The features are then used to train a classifier to predict the class of the image. CNNs are useful in computer vision tasks such as image classification, object detection, image segmentation, and image classification.
+#Convolutional Neural Network (CNN) is a type of deep learning algorithm that is used for image classification. It is based on the idea of convolving the input image with a set of filters to capture spatial hierarchies and extract features (like edges, shapes, textures, etc.) from the image. The features are then used to train a classifier to predict the class of the image. CNNs are useful in computer vision tasks such as image classification, object detection, image segmentation, and image classification. Common CNNs include LeNet, AlexNet, VGG, ResNet and Inception.
+
+#Stride is the number of pixels that the filter moves over the input image. A stride of 1 means that the filter moves one pixel at a time. A stride of 2 means that the filter moves two pixels at a time.
+
+#Padding is the number of pixels added to the input image to make it a multiple of the filter size. Padding is used to preserve the spatial dimensions of the feature maps.
+
+#Max Pooling is used to reduce the spatial dimensions of the feature maps by taking the maximum value in each pool.Average Pooling is used to reduce the spatial dimensions of the feature maps by taking the average value in each pool.
+
+#Fully Connected Layer is a layer that is used to perform a weighted sum of the inputs and outputs a single value. It is used to perform a classification task.
 
 #Import necessary libraries
 import tensorflow as tf #provides a set of tools for deep learning
