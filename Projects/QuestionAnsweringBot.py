@@ -16,12 +16,6 @@ def answer_question(question, context = knowledge_base):
     confidence = response["score"]
     return answer, confidence
     
-# Test the function
-# question = "What is LangChain?"
-# answer, confidence = answer_question(question)
-# print(f"Question: {question}")
-# print(f"Answer: {answer}")
-# print(f"Confidence: {confidence:.2f}")
 
 
 def main():
