@@ -28,7 +28,7 @@ def correct_grammar(text):
 interface = gr.Interface(
     fn=correct_grammar,
     inputs=gr.Textbox(lines=5, placeholder="Enter text with grammar or spelling mistakes"),
-    outputs=gr.Textbox(label="Corrected Text"),
+    outputs=gr.Textbox(lines=5, label="Corrected Text"),
     title="AI-Powered Grammar and Spell Checker",
     description="Enter text with errors, and DeepSeek AI will correct them."
 )
