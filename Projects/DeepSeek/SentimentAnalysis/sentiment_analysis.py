@@ -4,7 +4,7 @@ import gradio as gr
 # DeepSeek API URL
 OLLAMA_URL = "http://localhost:11434/api/generate"
 
-def analyze_sentiment(text, language="Engligh"):
+def analyze_sentiment(text, language="English"):
     """
     Uses DeepSeek AI to classify sentiment as positive, negative, or neutral.
     """
