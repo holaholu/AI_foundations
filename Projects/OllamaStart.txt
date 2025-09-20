@@ -1,0 +1,13 @@
+#Ollama is a platform for running and deploying AI models. It provides a simple and easy-to-use interface for interacting with AI models, and it is compatible with a wide range of AI frameworks and tools. Ollama is designed to be a powerful and flexible tool for AI research and development, and it is available for use on a wide range of platforms, including Windows, macOS, and Linux.visit https://ollama.com/ for more information
+
+#Ollama is perfect if you want to run AI models on your local machine, without the need for a cloud-based AI platform. It is also a great choice if you want to experiment with AI models and try out new ideas, or if you want to build and deploy AI models for your own use. It is also free to use, open source and private. Ollama is the engine and the model is the brain of your application
+
+#Commands
+ollama serve:  to start the server
+ollama pull deepseek-r1: to pull the model
+ollama stop deepseek-r1: to stop the server
+ollama list: to list the models
+ollama show deepseek-r1: to show the model
+ollama run qwen2.5: to run the model
+ollama rm deepseek-r1: to remove the model
+ollama prune: to remove unused models

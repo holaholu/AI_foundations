@@ -1,4 +1,0 @@
-ollama serve:  to start the server
-ollama pull deepseek-r1: to pull the model
-ollama stop deepseek-r1: to stop the server
-lsof -i :11434 -sTCP:LISTEN | awk 'NR>1 {print $2}' | xargs -r kill -9: to kill the server
