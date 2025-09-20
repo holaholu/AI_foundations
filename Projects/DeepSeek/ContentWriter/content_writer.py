@@ -49,7 +49,7 @@ interface = gr.Interface(
         gr.Textbox(label="Keywords (comma-separated)"),
         gr.Radio(["Professional", "Casual", "Persuasive"], label="Tone"),
     ],
-    outputs=gr.Textbox(label="Generated Content"),
+    outputs=gr.Textbox(label="Generated Content", lines=15),
     title="AI-Powered Content Writer",
     description="Enter a topic, keywords, and tone, and AI will generate a blog post or marketing content."
 )
