@@ -17,8 +17,7 @@ def ai_assistant(text):
 
     # prompt = f"Act as a personal AI assistant. If the user asks for weather, fetch data. Otherwise, respond naturally:\n\n{text}"
 
-    # p
-    rompt = f"Respond in {language}:\n\n{text}"
+   
 
 
     payload = {
@@ -63,8 +62,8 @@ interface = gr.Interface(
     inputs=gr.Textbox(lines=3, placeholder="Ask anything..."),
     outputs="text",
     title="AI-Powered Personal Assistant",
-    description="Type a query or use voice commands to interact with the assistant.",
-    live=True
+    description="Type a query or use voice commands to interact with the assistant."
+    #live=True
 )
 
 # Launch the web app
