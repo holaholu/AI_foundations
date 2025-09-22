@@ -8,7 +8,7 @@ import ollama
 # Initialize FastAPI app
 app = FastAPI()
 
-#Enable CORS to allow requests from different origins
+#Enable CORS to allow requests from different origins/for frontend
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
