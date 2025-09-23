@@ -1,0 +1,35 @@
+#MLOps is the process of automating and managing the entire machine learning lifecycle, from data collection and preprocessing to model training, deployment, and monitoring. Benefits include faster time to market, reduced costs, and improved model quality.
+
+
+simple project steps
+1. create virtual environment
+2. install python, docker, git, mlflow.
+3. Run docker init and edit the dockerfile
+4. Edit the requirements.txt file and run docker build
+5. install mlflow. This is used for tracking the model training process
+6. write the training code and run it.
+7. view with command: mlflow ui
+8. Create a monitoring setup (using import logging)
+9. use kubernetes to deploy the model. install minikube and run minikube start. create a deployment.yaml and service.yaml file. run kubectl apply -f deployment.yaml and kubectl apply -f service.yaml
+10. run minikube service ml-model-service --url : to get the url of the service
+11. run curl -X POST to the kubernetes service url
+
+
+#Cloud services available for MLOps
+1.AWS : SageMaker (for building and deploying models), Lambda, S3, EKS
+Steps :
+-Create account and create IAM roles
+-Create S3 bucket for storing training datasets
+-Train models on SageMaker and deploy endpoints
+-Setup EKS for orchestrating ML workloads
+2.Google Cloud : AI Platform, BigQuery ML, Tensorflow Enterprise, Kubernetes Engine (GKE)
+Steps:
+- Create Google Cloud project and enable AI Platform
+- Store data in Cloud Storage and train models using AI Platform
+- Use GKE for large-scale orchestration
+
+3.Azure : Machine Learning, Functions, Blob Storage, Kubernetes Service (AKS)
+steps:
+-Create Azure ML workspace for tracking models
+-Use AKS for managing models at scale
+-Leverage Azure DevOps to automate MLOps pipelines

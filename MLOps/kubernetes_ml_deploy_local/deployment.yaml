@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ml-model-deployment
+spec:
+  replicas: 3 #number of replicas/pods
+  selector:
+    matchLabels:
+      app: ml-model
+  template:
+    metadata:
+      labels:
+        app: ml-model
+    spec:
+      containers:
+      - name: ml-model-container
+        image: kubernetes_ml_deploy_local:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 5001
