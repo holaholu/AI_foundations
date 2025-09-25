@@ -5,3 +5,7 @@ NEWS_API_KEY = "8d9942b2a0284212a6e833acfb39f3cc"
 
 
 *.pkl
+Projects/Misc_Projects/data
+Projects/Misc_Projects/data/*
+Projects/Misc_Projects/data/*/*
+
