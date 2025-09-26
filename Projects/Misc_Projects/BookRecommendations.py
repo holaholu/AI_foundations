@@ -1,0 +1,53 @@
+#This uses collaborative filtering to recommend books to users
+#Import necessary libraries
+import pandas as pd
+from sklearn.metrics.pairwise import cosine_similarity
+
+#Sample data
+data ={
+   'user_id': [1,1,1,2,2,3,3,3,4,4],
+   'book_title': ['Book A','Book B','Book C','Book A','Book D',
+                  'Book B','Book C','Book E','Book A','Book C'
+   ],
+   'rating': [5,4,3,2,1,5,4,3,2,1]
+}
+
+#Create a DataFrame
+df = pd.DataFrame(data)
+#print(df)
+
+#Create a user-book matrix
+user_book_matrix = df.pivot_table(index='user_id', columns='book_title', values='rating').fillna(0)
+print(f"User-Book Matrix:\n {user_book_matrix}")
+
+#Calculate cosine similarity
+user_similarity = cosine_similarity(user_book_matrix)
+user_similarity_df = pd.DataFrame(user_similarity, index=user_book_matrix.index, columns=user_book_matrix.index)
+print(f"User Similarity Matrix:\n {user_similarity_df}")
+
+#function to recommend books
+def recommend_books(user_id, similarity_matrix,user_book_matrix,top_n=3):
+    if user_id not in user_book_matrix.index:
+        print(f"User {user_id} not found in the dataset")
+        return []
+    
+    #Get similarity scores for the user
+    similar_users = similarity_matrix[user_id].sort_values(ascending=False).drop(user_id)
+
+    #Aggregate ratings from similar users, weighted by similarity
+    recommended_books = {}
+    for sim_user, similarity in similar_users.items():
+        rated_books =user_book_matrix.loc[sim_user]
+        for book, rating in rated_books[rated_books>0].items():
+            if book not in user_book_matrix.loc[user_id] or user_book_matrix.loc[user_id,book] == 0:
+                    recommended_books[book] = recommended_books.get(book,0) + rating*similarity
+                
+        
+    #Sort books by aggregated score and return top recommendations
+    recommended_books = sorted(recommended_books.items(), key=lambda x: x[1], reverse=True)
+    return [book for book, score in recommended_books[:top_n]]
+
+#Get recommendations for a specific user
+user_id = 4
+recommendations = recommend_books(user_id, user_similarity_df, user_book_matrix,top_n=3)
+print(f"Recommendations for user {user_id}: {recommendations}")
