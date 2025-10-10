@@ -24,7 +24,7 @@ llm = HuggingFacePipeline(pipeline=model)  # Use 'pipeline' parameter
 prompt_template = PromptTemplate.from_template(
     "Explain {topic} in detail for a {age} year old to understand")
 
-# Create the chain properly
+# Create the chains properly
 chain = prompt_template | llm
 
 topic = input("Topic: ")
