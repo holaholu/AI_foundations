@@ -20,7 +20,7 @@ model = pipeline("text-generation",
 
 llm = HuggingFacePipeline(pipeline=model)  # Use 'pipeline' parameter
 
-# Create a prompt template
+# Create a prompt templates
 prompt_template = PromptTemplate.from_template(
     "Explain {topic} in detail for a {age} year old to understand")
 
